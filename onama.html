@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>O nama | Hirurgija Dr Eli</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+
+
+:root{
+  --primary:#0A1F8F;
+  --text:#0b0b0b;
+  --muted:#6f7782;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Poppins',sans-serif;
+}
+
+html,body{
+  background:#f5f7fb;
+  color:var(--text);
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:white;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
+  z-index:10;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:80px;
+}
+.cta-mobile{
+  display:none;
+}
+.logo-img{
+  height:80px;
+}
+
+.menu{
+  display:flex;
+  gap:28px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#3a3f45;
+  font-weight:500;
+}
+
+.menu a.active{
+  color:var(--primary);
+  font-weight:600;
+}
+
+.cta-top{
+  background:var(--primary);
+  color:white;
+  padding:12px 24px;
+  border-radius:999px;
+  text-decoration:none;
+}
+
+.hero{
+  position:relative;
+  padding:120px 8%;
+  overflow:hidden;
+}
+
+.hero-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+}
+
+
+
+
+
+.hero-text h1{
+  font-size:52px;
+  line-height:1.1;
+  margin:10px 0;
+  font-weight:700;
+}
+
+.slider-word{
+  display:block;
+  color:#0A1F8F;
+  transition:.4s;
+}
+
+.hero-text p{
+  max-width:460px;
+  color:#6b7280;
+  line-height:1.7;
+}
+
+.cta{
+  margin-top:25px;
+  background:#0A1F8F;
+  border:none;
+  color:white;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(74,108,247,.35);
+  transition:.3s;
+}
+
+.cta:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px rgba(74,108,247,.45);
+}
+
+
+
+
+.hero-image-clean{
+  position:relative;
+  width:480px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+}
+.cta-mobile{
+  color:#ffffff !important;
+}
+
+
+.hero-image-clean img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  position:relative;
+  z-index:2;
+
+  border-radius:28px; 
+  box-shadow:0 30px 70px rgba(10,31,143,.15);
+
+  opacity:0;
+  transform:translateY(40px) scale(.95);
+  animation:heroImageReveal 1.3s cubic-bezier(.2,.65,.2,1) forwards;
+  animation-delay:.4s;
+}
+
+
+@keyframes heroImageReveal{
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+
+.hero-image-clean img:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 40px 90px rgba(10,31,143,.22);
+  transition:.4s ease;
+}
+
+
+.hero-bg-glow{
+  position:absolute;
+  width:420px;
+  height:420px;
+  background:radial-gradient(circle, rgba(74,108,247,.25) 0%, transparent 70%);
+  border-radius:50%;
+  filter:blur(60px);
+  bottom:40px;
+  z-index:1;
+  animation:glowPulse 5s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse{
+  0%{transform:scale(1);}
+  100%{transform:scale(1.08);}
+}
+
+
+@media(max-width:900px){
+
+  .hero-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-image-clean{
+    margin-top:40px;
+    width:100%;
+  }
+
+  .hero-image-clean img{
+    max-width:320px;
+    border-radius:22px;
+  }
+
+  .hero-bg-glow{
+    width:300px;
+    height:300px;
+    bottom:20px;
+  }
+}
+.glass{
+  position:absolute;
+  inset:-25px;
+  border-radius:40px;
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,.25);
+  z-index:1;
+}
+
+
+
+.blob{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:.25;
+}
+
+.blob1{
+  width:520px;height:520px;
+  background:radial-gradient(circle,#4a6cf7 0%, #0A1F8F 100%);
+  top:-180px;left:-160px;
+}
+
+.blob2{
+  width:480px;height:480px;
+  background:radial-gradient(circle,#7dd3fc 0%, #3b82f6 100%);
+  bottom:-180px;right:-160px;
+}
+
+
+
+.section{
+  padding:120px 0;
+}
+
+.section-title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:60px;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.card{
+  background:white;
+  padding:50px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.card h3{
+  margin-bottom:20px;
+}
+
+.card p{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+
+
+.values{
+  background:linear-gradient(180deg,#f8faff,#eef3ff);
+}
+
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+.value-box{
+  text-align:center;
+  padding:40px 20px;
+  background:white;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,.05);
+  transition:.3s;
+}
+
+.value-box:hover{
+  transform:translateY(-10px);
+}
+
+.value-box h4{
+  margin:20px 0 15px;
+}
+
+
+
+.cta-section{
+  text-align:center;
+  padding:120px 0;
+  background:linear-gradient(180deg,#eef2ff,#e6ecff);
+}
+
+.btn-primary{
+  background:var(--primary);
+  color:white;
+  padding:16px 32px;
+  border-radius:999px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:20px;
+}
+
+
+
+
+
+@media(max-width:900px){
+
+  .hero-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-image img{
+    width:100%;
+    max-width:320px;
+  }
+
+  .grid-2{
+    grid-template-columns:1fr;
+  }
+
+  .values-grid{
+    grid-template-columns:1fr;
+  }
+
+
+}
+
+
+.about-premium{
+  background:white;
+}
+
+.about-box{
+  max-width:900px;
+  margin:auto;
+}
+
+.about-title{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.about-line{
+  width:80px;
+  height:4px;
+  background:#0A1F8F;
+  margin:15px auto 40px auto;
+  border-radius:10px;
+}
+
+.about-content{
+  opacity:0;
+  transform:translateY(40px);
+  animation:aboutFade 1.2s ease forwards;
+}
+
+.about-content p{
+  font-size:17px;
+  line-height:1.9;
+  color:#6f7782;
+  margin-bottom:22px;
+  text-align:left;
+}
+
+.about-content strong{
+  color:#0A1F8F;
+  font-weight:600;
+}
+
+@keyframes aboutFade{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+.surgery-premium{
+background:white;
+}
+
+.surgery-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.surgery-left h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.surgery-left p{
+font-size:17px;
+line-height:1.9;
+color:#6f7782;
+margin-bottom:20px;
+}
+
+
+
+.surgery-cards{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.surgery-card{
+background:#f8faff;
+padding:28px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+transition:.35s;
+opacity:0;
+transform:translateY(40px);
+animation:cardReveal 1s forwards;
+}
+
+.surgery-card:nth-child(2){
+animation-delay:.2s;
+}
+
+.surgery-card:nth-child(3){
+animation-delay:.4s;
+}
+
+.surgery-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 50px rgba(10,31,143,.12);
+}
+
+.surgery-card h4{
+margin-bottom:8px;
+}
+
+.surgery-card p{
+color:#6f7782;
+font-size:15px;
+}
+
+
+
+@keyframes cardReveal{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+
+@media(max-width:900px){
+
+.surgery-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+}
+
+.footer{
+  background:
+    linear-gradient(180deg,#f8faff,#eef2fb);
+  padding-top:90px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.5fr;
+  gap:60px;
+  padding-bottom:60px;
+}
+
+.footer h4{
+  margin-bottom:18px;
+  font-size:18px;
+}
+
+.footer-links a{
+  display:block;
+  margin-bottom:10px;
+  color:#4a4f57;
+  text-decoration:none;
+  transition:.2s;
+}
+
+.footer-links a:hover{
+  color:#0A1F8F;
+  transform:translateX(4px);
+}
+
+.footer-brand p{
+  margin-top:15px;
+  line-height:1.7;
+}
+
+.footer-contact p{
+  margin-bottom:10px;
+}
+
+
+.socials{
+  margin-top:15px;
+  display:flex;
+  gap:10px;
+}
+
+.socials a{
+  width:34px;height:34px;
+  background:#0A1F8F;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.footer-bottom{
+  border-top:1px solid #dfe3ee;
+  text-align:center;
+  padding:18px;
+  font-size:14px;
+  color:#7a808a;
+}
+
+@media(max-width:900px){
+
+.footer{
+  padding-top:60px;
+}
+
+.footer-grid{
+  grid-template-columns:1fr; 
+  gap:40px;
+  text-align:center;
+}
+
+.footer-brand p{
+  margin:15px auto 0;
+  max-width:320px;
+}
+
+.footer-links a{
+  display:inline-block;
+  margin:6px 8px;
+}
+
+.footer-contact p{
+  margin-bottom:6px;
+}
+
+.socials{
+  justify-content:center;
+}
+
+.footer-bottom{
+  font-size:13px;
+  padding:14px;
+}
+
+}
+
+.footer-logo{
+width:150px;
+height:auto;
+margin-bottom:10px;
+}
+
+
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:26px;
+  height:3px;
+  background:#0A1F8F;
+  border-radius:2px;
+  transition:.3s;
+}
+
+
+.cta-mobile{
+  display:none;
+}
+
+
+@media(max-width:900px){
+
+  .menu{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    align-items:center;
+    padding:30px 0;
+    gap:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+    transform:translateY(-20px);
+    opacity:0;
+    pointer-events:none;
+    transition:.3s ease;
+  }
+
+  .menu.active{
+    transform:translateY(0);
+    opacity:1;
+    pointer-events:auto;
+  }
+
+  .desktop-cta{
+    display:none;
+    background:white;
+  }
+
+  .cta-mobile{
+    display:inline-block;
+    background:#0A1F8F;
+    color:white;
+    padding:12px 24px;
+    border-radius:999px;
+    text-decoration:none;
+    margin-top:10px;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+}
+
+
+.mobile-nav{
+  display:none;
+}
+
+
+@media(max-width:900px){
+
+  
+  .slider-head .slider-nav{
+    display:none;
+  }
+
+  
+  .mobile-nav{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:30px;
+  }
+
+  .mobile-nav button{
+    width:42px;
+    height:42px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+  
+      
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="Hirurgija Dr Eli Logo" class="logo-img">
+        </a>
+      </div>
+  
+      
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      
+      <nav class="menu" id="menu">
+        <a href="index.html">Početna</a>
+        <a href="onama.html">O nama</a>
+        <a href="#doctor-slider">Specijalisti</a>
+        <a href="#gallery">Galerija</a>
+        <a class="cta-mobile" href="index.html#appointment">Zakaži pregled</a>
+      </nav>
+  
+      
+      <a class="cta-top desktop-cta" href="index.html#appointment">Zakaži pregled</a>
+  
+    </div>
+  </header>
+
+
+<section class="hero">
+  <div class="hero-container">
+
+    <div class="hero-text">
+
+      <h1>
+        Stručnost, iskustvo i povjerenje
+        <span class="slider-word">u hirurgiji</span>
+      </h1>
+
+      <br>
+
+      <p>
+        Hirurgija Dr Eli predstavlja spoj savremene medicine,
+        vrhunske opreme i dugogodišnjeg iskustva u oblasti hirurgije.
+        Vaše zdravlje nam je na prvom mjestu.
+      </p>
+
+      <button class="cta">Zakaži pregled</button>
+    </div>
+
+    <div class="hero-image-clean">
+      <div class="hero-bg-glow"></div>
+      <img src="Galerija/f7ed64ce-7dee-4e01-9106-74c07bc642df.png" alt="Naš tim">
+    </div>
+
+  </div>
+
+  <div class="hero-bg">
+    <span class="blob blob1"></span>
+    <span class="blob blob2"></span>
+  </div>
+</section>
+  
+
+<section class="section">
+  <div class="container grid-2">
+
+    <div>
+      <h2 style="font-size:38px; margin-bottom:25px;">
+        HIRURGIJA <span style="color:var(--primary);">Dr Eli</span>
+      </h2>
+
+      <p style="color:var(--muted); line-height:1.9; margin-bottom:20px;">
+        Moderna bolnica sa poliklinikom, specijalizovana za oblast 
+        <strong>opšte i laparoskopske hirurgije</strong>, ginekologije 
+        i ultrazvučne dijagnostike.
+      </p>
+
+      <p style="color:var(--muted); line-height:1.9;">
+        Naš tim čine iskusni ljekari i medicinsko osoblje posvećeni pružanju 
+        sigurne, kvalitetne i savremene zdravstvene usluge svakom pacijentu.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Naš pristup pacijentu</h3>
+      <p>
+        Posebnu pažnju posvećujemo individualnom pristupu, preciznoj dijagnostici 
+        i pažljivo planiranom operativnom tretmanu.
+      </p>
+
+      <p style="margin-top:15px;">
+        Sigurnost, stručnost i povjerenje su temelj našeg rada – 
+        od prvog pregleda do potpunog oporavka.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="section surgery-premium">
+
+<div class="container surgery-grid">
+
+<div class="surgery-left">
+
+<h2>Hirurške procedure</h2>
+
+<p>
+Operativne zahvate izvodimo klasičnim i laparoskopskim procedurama,
+uključujući operacije žučne kese, hernije, crijeva, biopsije i
+eksplorativne zahvate, kao i tretmane hemoroida, fistula,
+fisura, cista i apscesa.
+</p>
+
+<p>
+U našem spektru usluga nalaze se i zahvati iz oblasti
+amputacione i rekonstruktivne hirurgije,
+uz primjenu savremenih medicinskih metoda i
+individualno planiran operativni pristup.
+</p>
+
+</div>
+
+
+<div class="surgery-cards">
+
+<div class="surgery-card">
+<h4>Laparoskopska hirurgija</h4>
+<p>Minimalno invazivne procedure sa bržim oporavkom pacijenta.</p>
+</div>
+
+<div class="surgery-card">
+<h4>Proktološki tretmani</h4>
+<p>Savremeno liječenje hemoroida, fistula, fisura i drugih stanja.</p>
+</div>
+
+<div class="surgery-card">
+<h4>Rekonstruktivna hirurgija</h4>
+<p>Individualno planirani zahvati uz savremene medicinske standarde.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+  <div class="container grid-2">
+
+    <div class="card" >
+      <h3>Naša misija</h3>
+      <p>
+        Naš cilj je pružiti sigurnu, modernu i individualno prilagođenu
+        medicinsku uslugu svakom pacijentu.
+      </p>
+      <p>
+        Kombinujemo znanje, iskustvo i najnovije medicinske tehnologije
+        kako bismo osigurali najbolje rezultate i brz oporavak.
+      </p>
+
+      <p>U našoj ustanovi obavljaju se operacije štitaste žlijezde, tumora mekih tkiva glave i vrata, grudnog koša, dojki, abdomena i male karlice. Posebnu pažnju posvećujemo individualnom pristupu pacijentu, preciznoj dijagnostici i pažljivo planiranom operativnom tretmanu.</p>
+    <br><p>U okviru bolnice sa poliklinikom moguće je obaviti sve vrste hirurških, ginekoloških i radioloških (ultrazvučnih) pregleda na jednom mjestu, uz savremenu opremu i visok standard medicinske njege.</p>
+    <br><p><b>Naš cilj</b> je da pacijentima pružimo sigurnost, stručnost i povjerenje – od prvog pregleda do potpunog oporavka.</p>
+  </div>
+
+    <img src="Galerija/fd7cf1d9-11f4-477a-8b60-bf131ebfa541.png" style="width:100%; border-radius:18px">
+
+  </div>
+
+  
+</section>
+
+
+
+
+<section class="section" style="background:#f8faff;">
+  <div class="container">
+
+    <h2 class="section-title">Oblasti rada</h2>
+
+    <div class="values-grid">
+
+      <div class="value-box">
+        <h4>Operativni zahvati</h4>
+        <p>
+          Operacije štitaste žlijezde, tumora mekih tkiva glave i vrata, 
+          grudnog koša, dojki, abdomena i male karlice.
+        </p>
+      </div>
+
+      <div class="value-box">
+        <h4>Laparoskopska hirurgija</h4>
+        <p>
+          Operacije žučne kese, hernije, crijeva, biopsije i eksplorativni zahvati 
+          uz minimalno invazivne procedure.
+        </p>
+      </div>
+
+      <div class="value-box">
+        <h4>Specijalizovani tretmani</h4>
+        <p>
+          Liječenje hemoroida, fistula, fisura, cista i apscesa, 
+          kao i zahvati iz oblasti amputacione i rekonstruktivne hirurgije.
+        </p>
+      </div>
+  </div>
+</section>
+
+
+
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Vaše zdravlje je naš prioritet</h2>
+    <a href="index.html#appointment" class="btn-primary">Zakažite konsultacije</a>
+  </div>
+</section>
+
+<footer class="footer">
+
+  <div class="container footer-grid">
+
+    
+    <div class="footer-brand">
+      <img src="logo.png" alt="Hirurgija Dr Eli logo" class="footer-logo">
+    
+      <p>
+        Savremena hirurgija, individualan pristup i potpuna briga o pacijentu.
+        Naš cilj je sigurnost i brz oporavak.
+      </p>
+    </div>
+
+    
+    <div class="footer-links">
+      <h4>Navigacija</h4>
+      <a href="#usluge">Usluge</a>
+      <a href="onama.html">O nama</a>
+      <a href="#doktor">Naš tim</a>
+      <a href="#blog">Savjeti</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+
+   
+
+    
+    <div class="footer-contact">
+      <h4>Kontakt</h4>
+      <p>📧 info@hirurgija-eli.com</p>
+      <p>📞 +387 61 234 567</p>
+      <p>📍 Sarajevo, Bosna i Hercegovina</p>
+
+      <div class="socials">
+        <a href="#">f</a>
+        <a href="#">in</a>
+        <a href="#">ig</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Hirurgija Dr Eli — Sva prava zadržana
+  </div>
+
+</footer>
+<script>
+
+  const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+    
+    if(hamburger){
+    hamburger.addEventListener("click", ()=>{
+      menu.classList.toggle("active");
+    });
+    }
+</script>
+</body>
+</html>
