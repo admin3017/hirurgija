@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>O nama | Hirurgija Dr Eli</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hirurgija Dr Eli | Bolnica sa poliklinikom Podgorica</title>
+  
+  <meta name="description" content="Hirurgija Dr Eli je moderna bolnica sa poliklinikom u Podgorici. Specijalizovani smo za opštu i laparoskopsu hirurgiju, ginekologiju i ultrazvučnu dijagnostiku.">
+  <meta name="keywords" content="hirurgija Podgorica, laparoskopska hirurgija, ginekologija Podgorica, ultrazvuk Podgorica, hirurg Dr Eli">
+  <meta name="author" content="Hirurgija Dr Eli">
+  
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hirurgijadreli.com">
+  
+ 
+  <meta property="og:title" content="Hirurgija Dr Eli | Savremena hirurgija u Podgorici">
+  <meta property="og:description" content="Savremena bolnica sa poliklinikom. Specijalisti hirurgije, ginekologije i radiologije.">
+  <meta property="og:image" content="https://hirurgijadreli.com/Galerija/hero.jpg">
+  <meta property="og:url" content="https://hirurgijadreli.com">
+  <meta property="og:type" content="website">
+  
+ 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hirurgija Dr Eli">
+  <meta name="twitter:description" content="Savremena hirurgija i medicinska dijagnostika u Podgorici.">
+  <meta name="twitter:image" content="https://hirurgijadreli.com/Galerija/hero.jpg">
+  
+ 
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">s
 
 <style>
 
@@ -88,18 +113,19 @@ header{
   position:relative;
   padding:120px 8%;
   overflow:hidden;
+  text-align:center;
 }
 
 .hero-container{
   display:flex;
+  justify-content:center;
   align-items:center;
-  justify-content:space-between;
-  gap:60px;
 }
 
-
-
-
+.hero-text{
+  max-width:700px;
+  margin:auto;
+}
 
 .hero-text h1{
   font-size:52px;
@@ -115,22 +141,20 @@ header{
 }
 
 .hero-text p{
-  max-width:460px;
+  max-width:600px;
+  margin:20px auto;
   color:#6b7280;
   line-height:1.7;
 }
 
 .cta{
-  margin-top:25px;
-  background:#0A1F8F;
-  border:none;
-  color:white;
+  display:inline-block;
   padding:14px 28px;
+  background:#0A1F8F;
+  color:white;
   border-radius:30px;
   font-weight:600;
-  cursor:pointer;
-  box-shadow:0 10px 25px rgba(74,108,247,.35);
-  transition:.3s;
+  text-decoration:none;   /* uklanja liniju */
 }
 
 .cta:hover{
@@ -489,7 +513,9 @@ transform:translateY(0);
 }
 }
 
-
+.cta:hover{
+  text-decoration:none;
+}
 
 @media(max-width:900px){
 
@@ -500,17 +526,21 @@ gap:40px;
 
 }
 
+
 .footer{
-  background:
-    linear-gradient(180deg,#f8faff,#eef2fb);
+  background:linear-gradient(180deg,#f8faff,#eef2fb);
   padding-top:90px;
 }
 
 .footer-grid{
+  max-width:1100px;
+  margin:auto;
   display:grid;
-  grid-template-columns:2fr 1fr 1fr 1.5fr;
-  gap:60px;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:80px;
   padding-bottom:60px;
+  align-items:center;
+  text-align:center;
 }
 
 .footer h4{
@@ -534,21 +564,25 @@ gap:40px;
 .footer-brand p{
   margin-top:15px;
   line-height:1.7;
+  max-width:320px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .footer-contact p{
   margin-bottom:10px;
 }
 
-
 .socials{
   margin-top:15px;
   display:flex;
   gap:10px;
+  justify-content:center;
 }
 
 .socials a{
-  width:34px;height:34px;
+  width:34px;
+  height:34px;
   background:#0A1F8F;
   color:white;
   display:flex;
@@ -567,6 +601,14 @@ gap:40px;
   color:#7a808a;
 }
 
+.footer-logo{
+  width:150px;
+  height:auto;
+  margin-bottom:10px;
+}
+
+/* mobile */
+
 @media(max-width:900px){
 
 .footer{
@@ -574,7 +616,7 @@ gap:40px;
 }
 
 .footer-grid{
-  grid-template-columns:1fr; 
+  grid-template-columns:1fr;
   gap:40px;
   text-align:center;
 }
@@ -603,14 +645,10 @@ gap:40px;
 }
 
 }
-
-.footer-logo{
-width:150px;
-height:auto;
-margin-bottom:10px;
+.footer a{
+  text-decoration: none;   /* uklanja liniju */
+  color: inherit;          /* koristi boju teksta */
 }
-
-
 
 .hamburger{
   display:none;
@@ -706,6 +744,46 @@ margin-bottom:10px;
   }
 
 }
+
+
+.value-icon{
+  width:60px;
+  height:60px;
+  background:#eef2ff;
+  color:#0A1F8F;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:28px;
+  margin:0 auto 18px;
+}
+
+
+.mission-section{
+  padding:100px 0;
+}
+
+.mission-container{
+  display:flex;
+  justify-content:center;
+}
+
+.mission-card{
+  max-width:800px;
+  text-align:center;
+}
+
+.mission-card h3{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.mission-card p{
+  margin-bottom:18px;
+  line-height:1.8;
+  color:#6b7280;
+}
 </style>
 </head>
 
@@ -744,39 +822,37 @@ margin-bottom:10px;
   </header>
 
 
-<section class="hero">
-  <div class="hero-container">
+  <section class="hero">
 
-    <div class="hero-text">
-
-      <h1>
-        Stručnost, iskustvo i povjerenje
-        <span class="slider-word">u hirurgiji</span>
-      </h1>
-
-      <br>
-
-      <p>
-        Hirurgija Dr Eli predstavlja spoj savremene medicine,
-        vrhunske opreme i dugogodišnjeg iskustva u oblasti hirurgije.
-        Vaše zdravlje nam je na prvom mjestu.
-      </p>
-
-      <button class="cta">Zakaži pregled</button>
+    <div class="hero-container">
+  
+      <div class="hero-text">
+  
+        <h1>
+          Stručnost, iskustvo i povjerenje
+          <span class="slider-word">u hirurgiji</span>
+        </h1>
+  
+        <p>
+          Hirurgija Dr Eli predstavlja spoj savremene medicine,
+          vrhunske opreme i dugogodišnjeg iskustva u oblasti hirurgije.
+          Vaše zdravlje nam je na prvom mjestu.
+        </p>
+  
+        <a  href="index.html#appointment" class="cta">
+          Zakaži pregled
+        </a>
+  
+      </div>
+  
     </div>
-
-    <div class="hero-image-clean">
-      <div class="hero-bg-glow"></div>
-      <img src="Galerija/f7ed64ce-7dee-4e01-9106-74c07bc642df.png" alt="Naš tim">
+  
+    <div class="hero-bg">
+      <span class="blob blob1"></span>
+      <span class="blob blob2"></span>
     </div>
-
-  </div>
-
-  <div class="hero-bg">
-    <span class="blob blob1"></span>
-    <span class="blob blob2"></span>
-  </div>
-</section>
+  
+  </section>
   
 
 <section class="section">
@@ -867,30 +943,45 @@ individualno planiran operativni pristup.
 </section>
 
 
-<section class="section">
-  <div class="container grid-2">
+<section class="section mission-section">
 
-    <div class="card" >
+  <div class="container mission-container">
+
+    <div class="card mission-card">
+
       <h3>Naša misija</h3>
+
       <p>
         Naš cilj je pružiti sigurnu, modernu i individualno prilagođenu
         medicinsku uslugu svakom pacijentu.
       </p>
+
       <p>
         Kombinujemo znanje, iskustvo i najnovije medicinske tehnologije
         kako bismo osigurali najbolje rezultate i brz oporavak.
       </p>
 
-      <p>U našoj ustanovi obavljaju se operacije štitaste žlijezde, tumora mekih tkiva glave i vrata, grudnog koša, dojki, abdomena i male karlice. Posebnu pažnju posvećujemo individualnom pristupu pacijentu, preciznoj dijagnostici i pažljivo planiranom operativnom tretmanu.</p>
-    <br><p>U okviru bolnice sa poliklinikom moguće je obaviti sve vrste hirurških, ginekoloških i radioloških (ultrazvučnih) pregleda na jednom mjestu, uz savremenu opremu i visok standard medicinske njege.</p>
-    <br><p><b>Naš cilj</b> je da pacijentima pružimo sigurnost, stručnost i povjerenje – od prvog pregleda do potpunog oporavka.</p>
+      <p>
+        U našoj ustanovi obavljaju se operacije štitaste žlijezde, tumora mekih tkiva glave i vrata,
+        grudnog koša, dojki, abdomena i male karlice. Posebnu pažnju posvećujemo individualnom
+        pristupu pacijentu, preciznoj dijagnostici i pažljivo planiranom operativnom tretmanu.
+      </p>
+
+      <p>
+        U okviru bolnice sa poliklinikom moguće je obaviti sve vrste hirurških,
+        ginekoloških i radioloških (ultrazvučnih) pregleda na jednom mjestu,
+        uz savremenu opremu i visok standard medicinske njege.
+      </p>
+
+      <p>
+        <b>Naš cilj</b> je da pacijentima pružimo sigurnost, stručnost i povjerenje –
+        od prvog pregleda do potpunog oporavka.
+      </p>
+
+    </div>
+
   </div>
 
-    <img src="Galerija/fd7cf1d9-11f4-477a-8b60-bf131ebfa541.png" style="width:100%; border-radius:18px">
-
-  </div>
-
-  
 </section>
 
 
@@ -904,28 +995,46 @@ individualno planiran operativni pristup.
     <div class="values-grid">
 
       <div class="value-box">
+
+        <div class="value-icon">⚕</div>
+
         <h4>Operativni zahvati</h4>
+
         <p>
           Operacije štitaste žlijezde, tumora mekih tkiva glave i vrata, 
           grudnog koša, dojki, abdomena i male karlice.
         </p>
+
       </div>
 
       <div class="value-box">
+
+        <div class="value-icon">🔬</div>
+
         <h4>Laparoskopska hirurgija</h4>
+
         <p>
           Operacije žučne kese, hernije, crijeva, biopsije i eksplorativni zahvati 
           uz minimalno invazivne procedure.
         </p>
+
       </div>
 
       <div class="value-box">
+
+        <div class="value-icon">🩺</div>
+
         <h4>Specijalizovani tretmani</h4>
+
         <p>
           Liječenje hemoroida, fistula, fisura, cista i apscesa, 
           kao i zahvati iz oblasti amputacione i rekonstruktivne hirurgije.
         </p>
+
       </div>
+
+    </div>
+
   </div>
 </section>
 
@@ -956,11 +1065,11 @@ individualno planiran operativni pristup.
     
     <div class="footer-links">
       <h4>Navigacija</h4>
+      <a href="index.html">O nama</a>
       <a href="#usluge">Usluge</a>
-      <a href="onama.html">O nama</a>
-      <a href="#doktor">Naš tim</a>
-      <a href="#blog">Savjeti</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="index.html#doctor-slider">Naš tim</a>
+      <a href="index.html#blog">Savjeti</a>
+      <a href="index.html#appointment">Kontakt</a>
     </div>
 
    
@@ -968,22 +1077,22 @@ individualno planiran operativni pristup.
     
     <div class="footer-contact">
       <h4>Kontakt</h4>
-      <p>📧 info@hirurgija-eli.com</p>
-      <p>📞 +387 61 234 567</p>
-      <p>📍 Sarajevo, Bosna i Hercegovina</p>
-
+    
+      <p>📧 <a href="mailto:hirurgijadreli@gmail.com"> hirurgijadreli@gmail.com</a></p>
+    
+      <p>📞 <a href="tel:+38268066064 ">+382 68 066 064 </a></p>
+    
+      <p>📍 <a href="https://maps.app.goo.gl/1EixzqybLETVMQz98" target="_blank">
+        Ankarski bulevar 9/1 Podgorica
+      </a></p>
+    
       <div class="socials">
-        <a href="#">f</a>
-        <a href="#">in</a>
-        <a href="#">ig</a>
+        <a href="https://www.instagram.com/hirurgija_dr_eli?igsh=eWt2MmtuYTF6NDRp" target="_blank">f</a>
+        <a href="https://instagram.com" target="_blank">ig</a>
       </div>
+    
     </div>
 
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 Hirurgija Dr Eli — Sva prava zadržana
-  </div>
 
 </footer>
 <script>
