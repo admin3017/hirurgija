@@ -115,7 +115,7 @@ header{
 }
 
 .logo-img{
-  height:120px;
+  height:80px;
   width:auto;
   display:block;
 }
@@ -150,13 +150,46 @@ header{
 .cta-top{
   color:#fff !important;
 }
-
-
 .hero{
   position:relative;
   padding:80px 8%;
   overflow:hidden;
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
+
+/* VIDEO BACKGROUND */
+
+.hero-video{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+.hero-video video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* BLUE OVERLAY */
+
+.hero-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(10,31,143,0.35);
+  z-index:1;
+}
+
+/* CONTENT */
 
 .hero-container{
   display:flex;
@@ -164,6 +197,8 @@ header{
   align-items:center;
   text-align:center;
   min-height:70vh;
+  position:relative;
+  z-index:2;
 }
 
 .hero-text{
@@ -175,17 +210,19 @@ header{
   line-height:1.1;
   margin-bottom:20px;
   font-weight:700;
+  color:white;
+  text-shadow:0 5px 20px rgba(0,0,0,0.35);
 }
 
 .slider-word{
   display:block;
-  color:#0A1F8F;
+  color:#7dd3fc;
   transition:.4s;
 }
 
 .hero-text p{
   font-size:18px;
-  color:#6b7280;
+  color:#e5e7eb;
   line-height:1.7;
   margin-bottom:30px;
 }
@@ -201,6 +238,8 @@ header{
   cursor:pointer;
   box-shadow:0 10px 25px rgba(74,108,247,.35);
   transition:.3s;
+  text-decoration:none;
+  display:inline-block;
 }
 
 .cta:hover{
@@ -212,7 +251,6 @@ header{
   color:#ffffff !important;
 }
 
-
 /* Background blobs */
 
 .blob{
@@ -220,6 +258,7 @@ header{
   border-radius:50%;
   filter:blur(120px);
   opacity:.25;
+  z-index:1;
 }
 
 .blob1{
@@ -238,13 +277,13 @@ header{
   right:-160px;
 }
 
-
 /* Mobile */
 
 @media(max-width:900px){
 
   .hero{
     padding:100px 20px;
+    min-height:80vh;
   }
 
   .hero-text h1{
@@ -256,7 +295,6 @@ header{
   }
 
 }
-
 
 .section.bg-a{
   background:linear-gradient(180deg,#f8faff,#eef3ff);
@@ -685,7 +723,7 @@ footer{padding:60px 0;text-align:center;color:#8a93a1}
 
 
 .blog-img.img1{
-  background-image:url("Galerija/hirurgija1.JPG");
+  background-image:url("Galerija/Laparoskopska-hirurgija.webp");
 }
 
 
@@ -713,13 +751,10 @@ footer{padding:60px 0;text-align:center;color:#8a93a1}
   .blog-grid{grid-template-columns:1fr}
 }
 
-
 .appointment{
-  padding:120px 0;
+  padding:120px 20px;
   text-align:center;
-  background:
-    radial-gradient(900px at 50% -10%, rgba(10,31,143,.10), transparent 60%),
-    linear-gradient(180deg,#eef2ff,#e6ecff);
+  background:linear-gradient(180deg,#eef2ff,#e6ecff);
 }
 
 .appointment h2{
@@ -729,32 +764,76 @@ footer{padding:60px 0;text-align:center;color:#8a93a1}
 
 .appointment p{
   max-width:650px;
-  margin:0 auto 40px;
+  margin:0 auto 50px;
   color:#6f7782;
   line-height:1.7;
 }
 
+/* FORM CARD */
+
 .appointment-form{
-  display:flex;
-  justify-content:center;
+  max-width:750px;
+  margin:auto;
+  padding:40px;
+  background:white;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
   gap:18px;
-  flex-wrap:wrap;
 }
 
+/* INPUTS */
+
 .appointment-form input{
-  padding:16px 22px;
-  border:none;
-  border-radius:999px;
-  background:#f3f4f7;
-  width:230px;
+  padding:16px 18px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
   font-size:14px;
   outline:none;
-  transition:.25s;
+  transition:0.25s;
 }
 
 .appointment-form input:focus{
+  border-color:#0A1F8F;
   box-shadow:0 0 0 3px rgba(10,31,143,.15);
-  background:white;
+}
+
+/* BUTTON */
+
+.appointment-form button{
+  grid-column:span 2;
+  margin-top:10px;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:#0A1F8F;
+  color:white;
+  font-weight:600;
+  font-size:15px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.appointment-form button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(10,31,143,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .appointment-form{
+    grid-template-columns:1fr;
+    padding:30px 20px;
+  }
+
+  .appointment-form button{
+    grid-column:span 1;
+  }
+
 }
 
 .btn-primary{
@@ -803,7 +882,7 @@ footer{padding:60px 0;text-align:center;color:#8a93a1}
 }
 
 
-.g-box.img1{ background-image:url("Galerija/hirurgija1.JPG"); }
+.g-box.img1{ background-image:url("Galerija/hirurgija1.webp"); }
 .g-box.img2{ background-image:url("Galerija/hirurgija12.png"); }
 .g-box.img3{ background-image:url("Galerija/hirurgija13.png"); }
 .g-box.img4{ background-image:url("Galerija/hirurgija4.png"); }
@@ -1141,7 +1220,8 @@ padding:20px;
 }
 
 .modal-content{
-background:#fff;
+background:#0A1F8F;
+color:#ffffff;
 max-width:750px;
 width:100%;
 border-radius:14px;
@@ -1178,10 +1258,11 @@ border:4px solid #f1f1f1;
 .modal-content h2{
 margin-bottom:10px;
 font-size:24px;
+color:#ffffff;
 }
 
 .modal-role{
-color:#6b6b6b;
+color:#ffffff;
 font-weight:500;
 margin-bottom:20px;
 display:block;
@@ -1189,7 +1270,7 @@ display:block;
 
 .modal-content p{
 line-height:1.7;
-color:#444;
+color:#ffffff;
 text-align:left;
 }
 
@@ -1199,7 +1280,7 @@ top:15px;
 right:20px;
 font-size:28px;
 cursor:pointer;
-color:#333;
+color:#ffffff;
 transition:0.2s;
 }
 
@@ -1215,7 +1296,7 @@ text-align:left;
 
 .modal-content li{
 margin-bottom:8px;
-color:#555;
+color:#ffffff;
 }
 
 a{
@@ -1284,7 +1365,6 @@ font-weight:500;
               <nav class="menu" id="menu">
                 <a href="#pocetna">Početna</a>
                 <a href="onama.html">O nama</a>
-                <a href="#usluge">Usluge</a>
                 <a href="#doctor-slider">Specijalisti</a>
                 <a href="#gallery">Galerija</a>
                 <a class="cta-mobile" href="#appointment">Zakaži pregled</a>
@@ -1297,24 +1377,35 @@ font-weight:500;
           </header>
           <section class="hero" id="pocetna">
 
+            <!-- VIDEO BACKGROUND -->
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="Hero.mp4" type="video/mp4">
+              </video>
+            </div>
+          
+            <!-- BLUE OVERLAY -->
+            <div class="hero-overlay"></div>
+          
+          
             <div class="hero-container">
-          
+            
               <div class="hero-text">
-          
+            
                 <h1>
                   Vaše zdravlje u sigurnim rukama
                   <span class="slider-word">specijalista</span>
                 </h1>
-          
+            
                 <p>
                   Moderna dijagnostika i individualni pristup svakom pacijentu.
                   Brinemo o vašem zdravlju uz najnoviju medicinsku opremu i stručni tim.
                 </p>
-          
+            
                 <a href="#appointment" class="cta">Zakaži pregled</a>
-          
+            
               </div>
-          
+            
             </div>
           
             <div class="hero-bg">
@@ -1323,7 +1414,6 @@ font-weight:500;
             </div>
           
           </section>
-
 
 
           <section class="safe-section">
@@ -1453,17 +1543,16 @@ font-weight:500;
   
       <h2>Radiologija (Ultrazvuk)</h2>
   
-      <ul>
-        <li>abdomena i male karlice</li>
-        <li>štitastih i paraštitastih žlijezda</li>
-        <li>vrata</li>
-        <li>pazušnih regija</li>
-        <li>prepona</li>
-        <li>krvnih sudova vrata</li>
-        <li>krvnih sudova gornjih i donjih ekstremiteta</li>
-        <li>dojki</li>
-        <li>mekih tkiva</li>
-      </ul>
+        <ul>
+    <li>abdomena i male karlice</li>
+    <li>štitastih i paraštitastih žlijezda</li>
+    <li>vrata</li>
+    <li>pazušnih regija</li>
+    <li>prepone</li>
+    <li>dopler krvnih sudova</li>
+    <li>dojki</li>
+    <li>mekih tkiva</li>
+        </ul>
   
     </div>
   </div>
@@ -1476,16 +1565,21 @@ font-weight:500;
       <h2>Hirurgija</h2>
   
       <ul>
-        <li>pregled specijaliste opšte hirurgije</li>
-        <li>hirurško uklanjanje benignih promjena na koži</li>
-        <li>operacija uraslog nokta</li>
-        <li>obrada i zbrinjavanje rana</li>
-        <li>uklanjanje lipoma i ateroma</li>
-        <li>incizija i drenaža apscesa</li>
-        <li>hirurško liječenje hernije (kile)</li>
-        <li>laparoskopske hirurške procedure</li>
-        <li>kontrolni pregledi nakon operativnih zahvata</li>
-      </ul>
+  <li>Pregled kod specijaliste opšte hirurgije</li>
+  <li>Analna manometrija</li>
+  <li>Hirurško uklanjanje benignih i malignih tumora kože</li>
+  <li>Operacija nokatne ploče</li>
+  <li>Hirurška obrada rana</li>
+  <li>Uklanjanje cista i tumora mekih tkiva</li>
+  <li>Operacije na mekim tkivima glave, vrata, grudnog koša, trbuha i ekstremiteta</li>
+  <li>Incizija i drenaža apscesa</li>
+  <li>Abdominalne punkcije</li>
+  <li>Hirurško liječenje kila (ingvinalna, femoralna, umbilikalna, ventralna, postinciziona) klasičnom i laparoskopskom procedurom</li>
+  <li>Laparoskopske hirurške procedure (holecistektomija, apendektomija, cistektomija, plastike prednjeg trbušnog zida, biopsije, eksploracije trbuha i male karlice)</li>
+  <li>Amputaciona hirurgija</li>
+  <li>Rekonstruktivna hirurgija</li>
+  <li>Kontrolni pregledi nakon hirurških zahvata</li>
+</ul>
   
     </div>
   </div>
@@ -1556,17 +1650,6 @@ font-weight:500;
         
         <div class="doctor-card">
           <div class="avatar">
-            <img src="Specijalisti/" alt="Doktor">
-          </div>
-          <div class="quote">“</div>
-          <span class="small">Specijalista</span>
-          <h3>dr Ljiljana Bobić</h3>
-          <p>Specijalista anesteziologije sa reanimatologijom i kardioanesteziolog.</p>
-          <a href="#" class="btn-primary sm" onclick="openModal('bobic');return false;">Pročitaj više...</a>
-        </div>
-        
-        <div class="doctor-card">
-          <div class="avatar">
             <img src="Specijalisti/nebojsa.jpeg" alt="Doktor">
           </div>
           <div class="quote">“</div>
@@ -1578,35 +1661,59 @@ font-weight:500;
         
         <div class="doctor-card">
           <div class="avatar">
-            <img src="Specijalisti/ersan.jpg.jpeg" alt="Doktor">
+            <img src="Specijalisti/Igor.jpeg" alt="Doktor">
           </div>
           <div class="quote">“</div>
           <span class="small">Specijalista</span>
-          <h3>dr Ersan Bašović</h3>
-          <p>Specijalista ginekologije i akušerstva.</p>
-          <a href="#" class="btn-primary sm" onclick="openModal('basovic');return false;">Pročitaj više...</a>
+          <h3>dr Igor Georgijev</h3>
+          <p>Specijalista plastične, rekonstruktivne i estetske hirurgije.</p>
+          <a href="#" class="btn-primary sm" onclick="openModal('georgijev');return false;">Pročitaj više...</a>
         </div>
         
         <div class="doctor-card">
           <div class="avatar">
-            <img src="Specijalisti/dimitrije.jpg.jpeg" alt="Doktor">
+            <img src="Specijalisti/" alt="Doktor">
           </div>
           <div class="quote">“</div>
           <span class="small">Specijalista</span>
-          <h3>dr Dimitrije Burzan</h3>
-          <p>Specijalista opšte hirurgije.</p>
-          <a href="#" class="btn-primary sm" onclick="openModal('burzan');return false;">Pročitaj više...</a>
+          <h3>dr Ljiljana Bobić</h3>
+          <p>Specijalista anesteziologije sa reanimatologijom i kardioanesteziolog.</p>
+          <a href="#" class="btn-primary sm" onclick="openModal('bobic');return false;">Pročitaj više...</a>
         </div>
         
         <div class="doctor-card">
           <div class="avatar">
-            <img src="Specijalisti/Jelena.jpeg" alt="Doktor">
+            <img src="Specijalisti/pavle.jpeg" alt="Doktor">
           </div>
           <div class="quote">“</div>
           <span class="small">Specijalista</span>
-          <h3>dr Jelena Bojanić</h3>
-          <p>Specijalista radiologije.</p>
-          <a href="#" class="btn-primary sm" onclick="openModal('jelena');return false;">Pročitaj više...</a>
+          <h3>dr Pavle Zonjić</h3>
+          <p>Specijalista anesteziologije sa reanimatologijom.</p>
+          <a href="#" class="btn-primary sm" onclick="openModal('zonjic');return false;">Pročitaj više...</a>
+        </div>
+        
+        <!-- Rakočević -->
+        <div class="doctor-card">
+          <div class="avatar">
+            <img src="Specijalisti/rakocevic.jpg" alt="Doktor">
+          </div>
+          <div class="quote">“</div>
+          <span class="small">Specijalista</span>
+          <h3>dr Rakočević</h3>
+          <p>Specijalista.</p>
+          <a href="#" class="btn-primary sm" onclick="openModal('rakocevic');return false;">Pročitaj više...</a>
+        </div>
+        
+        <!-- Bakić -->
+        <div class="doctor-card">
+          <div class="avatar">
+            <img src="Specijalisti/bakic.jpg" alt="Doktor">
+          </div>
+          <div class="quote">“</div>
+          <span class="small">Specijalista</span>
+          <h3>dr Bakić</h3>
+          <p>Specijalista.</p>
+          <a href="#" class="btn-primary sm" onclick="openModal('bakic');return false;">Pročitaj više...</a>
         </div>
         
         <div class="doctor-card">
@@ -1622,6 +1729,28 @@ font-weight:500;
         
         <div class="doctor-card">
           <div class="avatar">
+            <img src="Specijalisti/ersan.jpg.jpeg" alt="Doktor">
+          </div>
+          <div class="quote">“</div>
+          <span class="small">Specijalista</span>
+          <h3>dr Ersan Bašović</h3>
+          <p>Specijalista ginekologije i akušerstva.</p>
+          <a href="#" class="btn-primary sm" onclick="openModal('basovic');return false;">Pročitaj više...</a>
+        </div>
+        
+        <div class="doctor-card">
+          <div class="avatar">
+            <img src="Specijalisti/jelena.jpeg" alt="Doktor">
+          </div>
+          <div class="quote">“</div>
+          <span class="small">Specijalista</span>
+          <h3>dr Jelena Bojanić</h3>
+          <p>Specijalista radiologije.</p>
+          <a href="#" class="btn-primary sm" onclick="openModal('jelena');return false;">Pročitaj više...</a>
+        </div>
+        
+        <div class="doctor-card">
+          <div class="avatar">
             <img src="Specijalisti/dusanka.jpeg" alt="Doktor">
           </div>
           <div class="quote">“</div>
@@ -1629,30 +1758,6 @@ font-weight:500;
           <h3>dr Dušanka Radović</h3>
           <p>Specijalista radiologije</p>
           <a href="#" class="btn-primary sm" onclick="openModal('radovic');return false;">Pročitaj više...</a>
-        </div>
-        
-        <div class="doctor-card">
-          <div class="avatar">
-            <img src="Specijalisti/pavle.jpeg" alt="Doktor">
-          </div>
-          <div class="quote">“</div>
-          <span class="small">Specijalista</span>
-          <h3>dr Pavle Zonjić</h3>
-          <p>Specijalista anesteziologije sa reanimatologijom.</p>
-          <a href="#" class="btn-primary sm" onclick="openModal('zonjic');return false;">Pročitaj više...</a>
-        </div>
-        
-        <div class="doctor-card">
-          <div class="avatar">
-            <img src="Specijalisti/Igor.jpeg" alt="Doktor">
-          </div>
-          <div class="quote">“</div>
-          <span class="small">Specijalista</span>
-          <h3>dr Igor Georgijev</h3>
-          <p>Specijalista plastične, rekonstruktivne i estetske hirurgije.</p>
-          <a href="#" class="btn-primary sm" onclick="openModal('georgijev');return false;">Pročitaj više...</a>
-        </div>
-        
         </div>
   </section>
 
@@ -1988,43 +2093,31 @@ Od osnivanja više privatnih zdravstvenih ustanova, uključujući i trenutni Cen
     </div>
   </section>
 
-  <section class="appointment" id="appointment">
-    <div class="container">
-    
-    <h2>Zakažite pregled</h2>
-    
-    <form class="appointment-form" onsubmit="sendWhatsApp(); return false;">
-      
-    <input type="text" id="name" placeholder="Vaše ime i prezime" required>
-    <input type="tel" id="phone" placeholder="Broj telefona" required>
-    <input type="text" id="service" placeholder="Vrsta pregleda (opciono)">
-    
-    <button type="submit" class="btn-primary">
-    POŠALJI NA WHATSAPP
-    </button>
-    
-    </form>
-    
-    </div>
-    </section>
-    
-    <script>
-    function sendWhatsApp() {
-    
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var service = document.getElementById("service").value;
-    
-    var message = "Pozdrav, želim da zakažem pregled.%0A%0A"
-    + "Ime: " + name + "%0A"
-    + "Telefon: " + phone + "%0A"
-    + "Vrsta pregleda: " + service;
-    
-    var url = "https://wa.me/38268066064 ?text=" + message;
-    
-    window.open(url, '_blank').focus();
-    }
-    </script>
+    <section class="appointment" id="appointment">
+<div class="container">
+
+<h2>Zakažite pregled</h2>
+
+<form class="appointment-form" action="https://formsubmit.co/bakirsutovic10@gmail.com" method="POST">
+
+<input type="text" name="ime" placeholder="Vaše ime i prezime" required>
+
+<input type="tel" name="telefon" placeholder="Broj telefona" required>
+
+<input type="text" name="pregled" placeholder="Vrsta pregleda (opciono)">
+
+<input type="date" name="datum" required>
+
+<input type="time" name="vrijeme" min="08:00" max="18:00" required>
+
+<button type="submit" class="btn-primary">
+ZAKAŽI PREGLED
+</button>
+
+</form>
+
+</div>
+</section>
 
 
   <section class="gallery" id="gallery">
@@ -2091,7 +2184,7 @@ Od osnivanja više privatnih zdravstvenih ustanova, uključujući i trenutni Cen
         </a></p>
       
         <div class="socials">
-          <a href="https://www.instagram.com/hirurgija_dr_eli?igsh=eWt2MmtuYTF6NDRp" target="_blank">f</a>
+          <a href="https://www.facebook.com/share/1DKLtZs7xL/" target="_blank">f</a>
           <a href="https://www.instagram.com/hirurgija_dr_eli?igsh=eWt2MmtuYTF6NDRp" target="_blank">ig</a>
         </div>
       
@@ -2306,7 +2399,6 @@ lightbox.addEventListener("click", (e) => {
     </script>
 </body>
 </html>
-
 
 
 
