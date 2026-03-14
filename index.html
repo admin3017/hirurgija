@@ -2100,15 +2100,21 @@ Od osnivanja više privatnih zdravstvenih ustanova, uključujući i trenutni Cen
 
 <form class="appointment-form" action="https://formsubmit.co/bakirsutovic10@gmail.com" method="POST">
 
+<!-- FormSubmit podešavanja -->
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_subject" value="Nova rezervacija pregleda">
+<input type="hidden" name="_next" value="https://hirurgijadreli.com/">
+
 <input type="text" name="ime" placeholder="Vaše ime i prezime" required>
 
 <input type="tel" name="telefon" placeholder="Broj telefona" required>
 
 <input type="text" name="pregled" placeholder="Vrsta pregleda (opciono)">
 
-<input type="date" name="datum" placeholder="Datum:"required>
+<input type="date" name="datum" required>
 
-<input type="time" name="vrijeme"    placeholder="Vrijeme:"   min="08:00" max="18:00" required>
+<input type="time" name="vrijeme" min="08:00" max="18:00" required>
 
 <button type="submit" class="btn-primary">
 ZAKAŽI PREGLED
